@@ -1,8 +1,9 @@
 def test_get_activities_returns_activity_details(client, activities):
     # Arrange
+    endpoint = "/activities"
 
     # Act
-    response = client.get("/activities")
+    response = client.get(endpoint)
 
     # Assert
     assert response.status_code == 200
